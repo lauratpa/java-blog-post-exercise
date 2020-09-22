@@ -3,7 +3,7 @@ package Blog;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TextPost implements Postable {
+public class TextPost implements Postable, Commentable {
     private String title;
     private String content;
     private ArrayList<String> comments = new ArrayList<>();
