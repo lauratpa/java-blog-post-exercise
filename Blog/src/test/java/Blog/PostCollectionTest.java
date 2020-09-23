@@ -79,7 +79,7 @@ public class PostCollectionTest {
     public void canCreateVideoPosts() {
         // Arrange
         VideoPost videoPost = new VideoPost(textTitle, videoUrl);
-        String comment = "Such vibrant colors";
+        String comment = "Needs more cats";
 
         // Act
         videoPost.addComment(comment);
@@ -106,5 +106,19 @@ public class PostCollectionTest {
         }
 
         assertEquals(videoTitle, titles.get(0));
+    }
+
+    @Ignore("can add text reviews to post")
+    @Test
+    public void canAddReviewsToVideoPosts() {
+        // Arrange
+        VideoPost videoPost = new VideoPost(textTitle, videoUrl);
+        String review = "Nice";
+
+        // Act
+        videoPost.addReview(review);
+
+        // Assert
+        assertEquals(review, videoPost.getReview().get(0));
     }
 }
